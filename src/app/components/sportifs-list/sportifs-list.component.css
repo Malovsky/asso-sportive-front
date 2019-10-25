@@ -1,0 +1,21 @@
+.card {
+    width: 400px; /*1*/
+    margin: 0px auto; /*2*/
+    background-color: white; /*3*/
+    box-shadow: 0px 5px 20px #999; /*4*/
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    transition: transform .5s;
+  }
+  .card a { /*5*/
+    color: #333; 
+    text-decoration: none;
+  }
+  .card:hover { /*6*/
+    filter: grayscale(0);
+    background-color:khaki;
+    transform: scale(1.5) translateX(-200px);
+
+
+  }

@@ -1,0 +1,16 @@
+<div>
+    <div *ngFor="let s of sportifs">
+        <div class="card">
+            <div class="container">
+                <div>{{s.nom}}</div>
+                <div>{{s.prenom}}</div>
+                <div>{{s.sexe}}</div>
+                <div>{{s.age}}</div>
+                <div *ngIf="s.sport.jouer" >Joue à : {{s.sport.jouer}}</div>
+                <div *ngIf="s.sport.entrainer">Entraine : {{s.sport.entrainer}}</div>
+                <div *ngIf="s.sport.arbitrer">Arbitre : {{s.sport.arbitrer}}</div>
+
+            </div>
+        </div>
+    </div>
+</div>

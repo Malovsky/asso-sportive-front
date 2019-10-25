@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-const routes: Routes = [];
+
+import { Routes, RouterModule } from '@angular/router';
+import { SportifsListComponent } from './components/sportifs-list/sportifs-list.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: SportifsListComponent
+    }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
