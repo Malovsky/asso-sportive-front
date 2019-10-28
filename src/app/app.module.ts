@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './components/accueil/accueil/accueil.component';
 import { NavbarreComponent } from './components/navbarre/navbarre.component';
 import { SportifsListComponent } from './components/sportifs-list/sportifs-list.component';
+import { GymnasesComponent } from './components/gymnases/gymnases.component';
+import { SportifsComponent } from './components/sportifs/sportifs.component';
+import { ViewSeancesComponent } from './components/view-seances/view-seances.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
-    NavbarreComponent
-    SportifsListComponent
+    NavbarreComponent,
+    SportifsListComponent,
+    GymnasesComponent,
+    SportifsComponent,
+    ViewSeancesComponent
   ],
   imports: [
     BrowserModule,

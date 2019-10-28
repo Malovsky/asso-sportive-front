@@ -14,14 +14,14 @@ export class SportifsListComponent implements OnInit {
   constructor(private sportService : SportifsService) { }
 
   ngOnInit() {
-    this.getCustomers();
+    this.getSportifs();
   }
 
-  getCustomers(){
+  getSportifs(){
     this.sportService.getAllSportifs().subscribe(
       data =>{this.sportifs = data},
       err => console.error(err),
-      () => console.log('cust chargées' + this.sportifs)
+      () => console.log('Sportifs chargées')
       );
   }
 

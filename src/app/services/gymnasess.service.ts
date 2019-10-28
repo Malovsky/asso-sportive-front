@@ -21,7 +21,7 @@ export class GymnasessService {
     return this.httpService.get<GymnasesAll>(url);
   }
 
-  getGymnaseById(id: string): Observable<GymnaseDetail> {
+  getGymnaseById(id: number): Observable<GymnaseDetail> {
     console.log('Call getGymnase');
     const url = `${this.urlGymnases}/id/${id}`;
     return this.httpService.get<GymnaseDetail>(url);

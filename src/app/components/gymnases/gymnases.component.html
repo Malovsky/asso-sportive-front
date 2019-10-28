@@ -1,0 +1,16 @@
+<div id="entete"><br>
+    Voici la liste de tous les gymnases auxquels a accès notre association.
+</div>
+<br>
+<div>
+    <div *ngFor="let g of gymnases">
+            <div class="container">
+                <div><span id="attribut">ID</span> : <a [routerLink]="['/seancesForGymnase', g.idGymnase]">{{g.idGymnase}}</a></div>
+                <div><span id="attribut">NOM</span> : {{g.nomGymnase}}</div>
+                <div><span id="attribut">ARESSE</span> : {{g.adresse}}</div>
+                <div><span id="attribut">VILLE</span> : {{g.ville}}</div>
+                <div><span id="attribut">SURFACE</span> : {{g.surface}}</div>
+            </div>
+        <hr>
+    </div>
+</div>
