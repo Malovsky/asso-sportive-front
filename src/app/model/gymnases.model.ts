@@ -17,5 +17,16 @@ export class GymnaseDetail {
         public adresse: string,
         public ville: string,
         public surface: number,
+        public seances: Seances[]
+    ) {}
+}
+
+export class Seances {
+    constructor(
+        public idSportifEntraineur: number,
+        public jour: string,
+        public horaire: number,
+        public duree: number,
+        public libelle: string
     ) {}
 }
