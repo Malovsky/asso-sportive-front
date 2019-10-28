@@ -7,6 +7,10 @@ import { SportifsListComponent } from './components/sportifs-list/sportifs-list.
 import { GymnasesComponent } from './components/gymnases/gymnases.component';
 import { ViewSeancesComponent } from './components/view-seances/view-seances.component';
 import { AccueilComponent } from './components/accueil/accueil/accueil.component';
+import { SearchGymnaseComponent } from './components/search-gymnase/search-gymnase.component';
+import { SearchSportifComponent } from './components/search-sportif/search-sportif.component';
+import { SearchSeanceComponent } from './components/search-seance/search-seance.component';
+import { AllSeancesComponent } from './components/all-surfaces/all-seances.component';
 
 const routes: Routes = [
   {
@@ -24,7 +28,23 @@ const routes: Routes = [
   {
     path: '',
     component: AccueilComponent
-  }
+  },
+  {
+    path: 'gymnaseSearch',
+    component: SearchGymnaseComponent
+  },
+  {
+    path: 'sportifSearch',
+    component: SearchSportifComponent
+  },
+  {
+    path: 'seanceSearch',
+    component: SearchSeanceComponent
+  },
+  {
+    path: 'allSurfaces',
+    component: AllSeancesComponent
+  },
 
 ];
 

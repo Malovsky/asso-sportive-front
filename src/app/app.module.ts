@@ -11,6 +11,10 @@ import { SportifsListComponent } from './components/sportifs-list/sportifs-list.
 import { GymnasesComponent } from './components/gymnases/gymnases.component';
 import { SportifsComponent } from './components/sportifs/sportifs.component';
 import { ViewSeancesComponent } from './components/view-seances/view-seances.component';
+import { SearchGymnaseComponent } from './components/search-gymnase/search-gymnase.component';
+import { SearchSportifComponent } from './components/search-sportif/search-sportif.component';
+import { SearchSeanceComponent } from './components/search-seance/search-seance.component';
+import { AllSeancesComponent } from './components/all-surfaces/all-seances.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ViewSeancesComponent } from './components/view-seances/view-seances.com
     SportifsListComponent,
     GymnasesComponent,
     SportifsComponent,
-    ViewSeancesComponent
+    ViewSeancesComponent,
+    SearchGymnaseComponent,
+    SearchSportifComponent,
+    SearchSeanceComponent,
+    AllSeancesComponent
   ],
   imports: [
     BrowserModule,

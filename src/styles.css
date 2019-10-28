@@ -1,5 +1,5 @@
 body {
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #attribut {
@@ -11,4 +11,18 @@ body {
     text-align: center;
     font-size: 20px;
     font-weight: bolder;
+}
+
+.welcome {
+    font-size: 18px;
+}
+
+footer {
+    font-size: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 80%;
+    font-weight: bolder;
+    text-decoration: underline;
 }
