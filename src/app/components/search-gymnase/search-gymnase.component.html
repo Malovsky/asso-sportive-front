@@ -1,1 +1,27 @@
-<p>search-gymnase works!</p>
+<br><br>
+<form [formGroup]="findbynomform" (ngSubmit)="getGymnaseByName(gymnase)" novalidate>
+    <input type="text" class="form-control" formControlName="gymnaseName" [(ngModel)]="gymnaseName" placeholder="Nom du gymnase.">
+    <button class="btn btn-outline-secondary" type="submit">Chercher</button>
+</form>
+
+<br><br>
+
+<form [formGroup]="findbyidform" (ngSubmit)="getGymnaseById(gymnase)" novalidate>
+    <input type="number" class="form-control" formControlName="gymnaseId" [(ngModel)]="gymnaseId" placeholder="ID du gymnase.">
+    <button class="btn btn-outline-secondary" type="submit">Chercher</button>
+</form>
+
+<br><br><br>
+
+<div class="container">
+    <table class="table table-bordered table-inverse">
+        <div class="container" *ngFor="let g of gymnaseSearch">
+            <div><span id="attribut">ID</span> : <a [routerLink]="['/seancesForGymnase', g.idGymnase]">{{g.idGymnase}}</a></div>
+            <div><span id="attribut">NOM</span> : {{g.nomGymnase}}</div>
+            <div><span id="attribut">ARESSE</span> : {{g.adresse}}</div>
+            <div><span id="attribut">VILLE</span> : {{g.ville}}</div>
+            <div><span id="attribut">SURFACE</span> : {{g.surface}}</div>
+            <hr>
+        </div>
+    </table>
+</div>

@@ -26,3 +26,14 @@ footer {
     font-weight: bolder;
     text-decoration: underline;
 }
+
+form {
+    max-width: 30%;
+    position: relative;
+    top: 20%;
+    left: 33%;
+}
+
+input {
+    margin-bottom: 10px;
+}
