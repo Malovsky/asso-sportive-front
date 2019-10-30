@@ -28,7 +28,7 @@ footer {
 }
 
 form {
-    max-width: 30%;
+    max-width: 100%;
     position: relative;
     top: 20%;
     left: 33%;
@@ -36,4 +36,9 @@ form {
 
 input {
     margin-bottom: 10px;
+}
+
+.inline {
+    display: inline-block;
+    padding: 5px;
 }

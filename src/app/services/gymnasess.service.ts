@@ -39,9 +39,15 @@ export class GymnasessService {
     return this.httpService.get<GymnaseDetail>(url);
   }
 
+  getGymnaseByVille(ville: string): Observable<GymnaseDetail> {
+    console.log('Call getGymnaseByVille');
+    const url = `${this.urlGymnases}/ville/${ville}`;
+    return this.httpService.get<GymnaseDetail>(url);
+  }
+
   getGymnaseWithSurface(min: number, max: number): Observable<GymnaseDetail> {
     console.log('Call getGymnaseWithSurface');
-    const url = `${this.urlGymnases}/surface-min-max` + min + max;
+    const url = `${this.urlGymnases}/surface-min-max`;
     return this.httpService.get<GymnaseDetail>(url);
   }
 

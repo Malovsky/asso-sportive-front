@@ -1,22 +1,23 @@
 <br><br>
-<form [formGroup]="findbyidform" (ngSubmit)="getSportifById(sportif)" novalidate>
-    <input type="number" class="form-control" formControlName="sportifId" [(ngModel)]="sportifId" placeholder="Id du sportif.">
-    <button class="btn btn-outline-secondary" type="submit">Chercher</button>
-</form>
+<div class="inline">
+    <form [formGroup]="findbyidform" (ngSubmit)="getSportifById(sportif)" novalidate>
+        <input type="number" class="form-control" formControlName="sportifId" [(ngModel)]="sportifId" placeholder="Id du sportif.">
+        <button class="btn btn-outline-secondary" type="submit">Chercher</button>
+    </form>
+</div>
 
 <br><br><br>
 
 <div class="container">
     <table class="table table-bordered table-inverse">
         <div class="container" *ngFor="let s of sportifSearch"><div><span id="attribut">ID</span> : {{s.idSportif}}</div>
-        <div><span id="attribut">NOM</span> : {{s.nom}}</div>
-        <div><span id="attribut">PRENOM</span> : {{s.prenom}}</div>
-        <div><span id="attribut">SEXE</span> : {{s.sexe}}</div>
-        <div><span id="attribut">AGE</span> : {{s.age}}</div>
-        <div *ngIf="s.sport.jouer" ><span id="attribut">Joue à</span> : {{s.sport.jouer}}</div>
-        <div *ngIf="s.sport.entrainer"><span id="attribut">Entraine</span> : {{s.sport.entrainer}}</div>
-        <div *ngIf="s.sport.arbitrer"><span id="attribut">Arbitre</span> : {{s.sport.arbitrer}}</div>
-        <hr>
+            <div><span id="attribut">NOM</span> : {{s.nom}}</div>
+            <div><span id="attribut">PRENOM</span> : {{s.prenom}}</div>
+            <div><span id="attribut">SEXE</span> : {{s.sexe}}</div>
+            <div><span id="attribut">AGE</span> : {{s.age}}</div>
+            <div *ngIf="s.sport.jouer" ><span id="attribut">Joue à</span> : {{s.sport.jouer}}</div>
+            <div *ngIf="s.sport.entrainer"><span id="attribut">Entraine</span> : {{s.sport.entrainer}}</div>
+            <div *ngIf="s.sport.arbitrer"><span id="attribut">Arbitre</span> : {{s.sport.arbitrer}}</div>
         </div>
     </table>
 </div>

@@ -13,6 +13,8 @@ export class SearchGymnaseComponent implements OnInit {
   public gymnaseSearch;
   findbynomform : FormGroup;
   findbyidform : FormGroup;
+  findbyvilleform : FormGroup;
+  findbysurminmaxform : FormGroup;
   showTable: boolean = false;
 
   constructor(private gymnaseService: GymnasessService) { }
@@ -23,6 +25,13 @@ export class SearchGymnaseComponent implements OnInit {
     });
     this.findbyidform = new FormGroup({
       gymnaseId: new FormControl('', Validators.required)
+    });
+    this.findbyvilleform = new FormGroup({
+      gymnaseVille: new FormControl('', Validators.required)
+    });
+    this.findbysurminmaxform = new FormGroup({
+      gymnasesurfmin: new FormControl('', Validators.required),
+      gymnasesurfmax: new FormControl('', Validators.required)
     });
   }
 
@@ -43,6 +52,23 @@ export class SearchGymnaseComponent implements OnInit {
     }
   }
 
+  getGymnaseByVille() {
+    if (this.findbyvilleform.valid) {
+      console.log(this.findbyvilleform);
+      this.gymnaseService.getGymnaseByVille(this.findbyvilleform.value.gymnaseVille.toUpperCase( )).subscribe(
+        data => {
+          this.gymnaseSearch = data;
+          console.log('getGymnaseByVille',data);
+          this.findbyvilleform.reset();
+          return true;
+        },
+        error => {
+          console.error(error);
+        }
+      )
+    }
+  }
+
   getGymnaseById() {
     if (this.findbyidform.valid) {
       console.log(this.findbyidform);
@@ -52,13 +78,29 @@ export class SearchGymnaseComponent implements OnInit {
           console.log('getGymnaseById',data);
           this.findbyidform.reset();
           return true;
+        },
+        error => {
+          console.error(error);
         }
       )
     }
   }
 
-  /* toggleTable(): void {
-    this.showTable = !this.showTable;
-  } */
+  getGymnaseBySurfaceMinMax() {
+    if (this.findbysurminmaxform.valid) {
+      console.log(this.findbysurminmaxform);
+      this.gymnaseService.getGymnaseWithSurface(this.findbysurminmaxform.value.gymnasesurfmin, this.findbysurminmaxform.value.gymnasesurfmax).subscribe(
+        data => {
+          this.gymnaseSearch = data;
+          console.log('getGymnaseBySurfaceMinMax',data);
+          this.findbysurminmaxform.reset();
+          return true;
+        },
+        error => {
+          console.error(error);
+        }
+      )
+    }
+  }
 
 }
