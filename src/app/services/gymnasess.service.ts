@@ -47,7 +47,7 @@ export class GymnasessService {
 
   getGymnaseWithSurface(min: number, max: number): Observable<GymnaseDetail> {
     console.log('Call getGymnaseWithSurface');
-    const url = `${this.urlGymnases}/surface-min-max`;
+    const url = `${this.urlGymnases}/surface-min-max/${min}/${max}`;
     return this.httpService.get<GymnaseDetail>(url);
   }
 

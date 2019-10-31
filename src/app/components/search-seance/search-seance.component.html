@@ -1,18 +1,23 @@
 <br><br>
 <div class="inline">
     <form [formGroup]="findseancesbyidform" (ngSubmit)="getSeancesReg(seance)" novalidate>
-        <input type="number" class="form-control" formControlName="seanceId" [(ngModel)]="seanceId" placeholder="Id de la seance.">
+        <input type="number" class="form-control" formControlName="seanceId" [(ngModel)]="seanceId"
+            placeholder="Id de la seance.">
         <button class="btn btn-outline-secondary" type="submit">Chercher</button>
     </form>
 </div>
 <br><br>
-<div *ngFor="let s of seancesReg">
-    <div class="container">
-        <div><span id="attribut">Entraineur</span> : {{s.idSportifEtraineur}}</div>
-        <div><span id="attribut">Jour</span> : {{s.jour}}</div>
-        <div><span id="attribut">Horaire</span> : {{s.horaire}}</div>
-        <div><span id="attribut">Durée</span> : {{s.duree}} minutes</div>
-        <div><span id="attribut">Libelle Sport</span> : {{s.libelle}}</div>
+<div class="wrapper">
+    <div *ngFor="let s of seancesReg">
+        <div class="container">
+            <div class="card">
+                <div><span id="attribut">Entraineur</span> : {{s.idSportifEtraineur}}</div>
+                <div><span id="attribut">Jour</span> : {{s.jour}}</div>
+                <div><span id="attribut">Horaire</span> : {{s.horaire}}</div>
+                <div><span id="attribut">Durée</span> : {{s.duree}} minutes</div>
+                <div><span id="attribut">Libelle Sport</span> : {{s.libelle}}</div>
+            </div>
+        </div>
+        <hr>
     </div>
-    <hr>
 </div>

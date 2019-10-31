@@ -2,13 +2,17 @@
     Voici la séances pour le gymnase selectionné.
 </div>
 <br>
-<div *ngFor="let g of gymnaseReg">
-    <div class="container">
-        <div><span id="attribut">Entraineur</span> : {{g.idSportifEtraineur}}</div>
-        <div><span id="attribut">Jour</span> : {{g.jour}}</div>
-        <div><span id="attribut">Horaire</span> : {{g.horaire}}</div>
-        <div><span id="attribut">Durée</span> : {{g.duree}} minutes</div>
-        <div><span id="attribut">Libelle Sport</span> : {{g.libelle}}</div>
+<div class="wrapper">
+    <div *ngFor="let g of gymnaseReg">
+        <div class="container">
+            <div class="card">
+                <div><span id="attribut">Entraineur</span> : {{g.idSportifEtraineur}}</div>
+                <div><span id="attribut">Jour</span> : {{g.jour}}</div>
+                <div><span id="attribut">Horaire</span> : {{g.horaire}}</div>
+                <div><span id="attribut">Durée</span> : {{g.duree}} minutes</div>
+                <div><span id="attribut">Libelle Sport</span> : {{g.libelle}}</div>
+            </div>
+        </div>
+        <hr>
     </div>
-    <hr>
 </div>

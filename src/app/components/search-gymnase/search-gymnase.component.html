@@ -34,7 +34,9 @@
 
 <div class="container">
     <table class="table table-bordered table-inverse">
+        <div class="wrapper">
         <div class="container" *ngFor="let g of gymnaseSearch">
+            <div class="card">
             <div><span id="attribut">ID</span> : <a [routerLink]="['/seancesForGymnase', g.idGymnase]">{{g.idGymnase}}</a></div>
             <div><span id="attribut">NOM</span> : {{g.nomGymnase}}</div>
             <div><span id="attribut">ARESSE</span> : {{g.adresse}}</div>
@@ -42,5 +44,7 @@
             <div><span id="attribut">SURFACE</span> : {{g.surface}}</div>
             <hr>
         </div>
+    </div>
+    </div>
     </table>
 </div>

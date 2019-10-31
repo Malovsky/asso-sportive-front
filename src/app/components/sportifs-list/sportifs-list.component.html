@@ -3,17 +3,22 @@
 </div>
 <br>
 <div>
-    <div *ngFor="let s of sportifs">
+
+    <div class="wrapper">
+        <div *ngFor="let s of sportifs">
             <div class="container">
-                <div><span id="attribut">ID</span> : {{s.idSportif}}</div>
-                <div><span id="attribut">NOM</span> : {{s.nom}}</div>
-                <div><span id="attribut">PRENOM</span> : {{s.prenom}}</div>
-                <div><span id="attribut">SEXE</span> : {{s.sexe}}</div>
-                <div><span id="attribut">AGE</span> : {{s.age}}</div>
-                <div *ngIf="s.sport.jouer" ><span id="attribut">Joue à</span> : {{s.sport.jouer}}</div>
-                <div *ngIf="s.sport.entrainer"><span id="attribut">Entraine</span> : {{s.sport.entrainer}}</div>
-                <div *ngIf="s.sport.arbitrer"><span id="attribut">Arbitre</span> : {{s.sport.arbitrer}}</div>
+                <div class="card">
+                    <div><span id="attribut">ID</span> : {{s.idSportif}}</div>
+                    <div><span id="attribut">NOM</span> : {{s.nom}}</div>
+                    <div><span id="attribut">PRENOM</span> : {{s.prenom}}</div>
+                    <div><span id="attribut">SEXE</span> : {{s.sexe}}</div>
+                    <div><span id="attribut">AGE</span> : {{s.age}}</div>
+                    <div *ngIf="s.sport.jouer"><span id="attribut">Joue à</span> : {{s.sport.jouer}}</div>
+                    <div *ngIf="s.sport.entrainer"><span id="attribut">Entraine</span> : {{s.sport.entrainer}}</div>
+                    <div *ngIf="s.sport.arbitrer"><span id="attribut">Arbitre</span> : {{s.sport.arbitrer}}</div>
+                </div>
             </div>
-        <hr>
+        </div>
     </div>
+
 </div>
